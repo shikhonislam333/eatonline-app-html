@@ -526,18 +526,26 @@ span {
 }
 .dashboard-main-area .payments-status-main-wrap .nav .nav-item .nav-link {
   display: inline-block;
-  color: #FFF;
+  color: #16B968;
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
   line-height: 1;
-  background-color: #16B968;
+  background-color: var(--white);
   border-radius: 4px;
   padding: 11px 14px;
+}
+.dashboard-main-area .payments-status-main-wrap .nav .nav-item .nav-link.active {
+  background-color: #16B968;
+  color: var(--white);
 }
 .dashboard-main-area .payments-status-main-wrap .nav .nav-item .nav-link.style-2 {
   background-color: var(--white);
   color: var(--theme);
+}
+.dashboard-main-area .payments-status-main-wrap .nav .nav-item .nav-link.style-2.active {
+  background-color: var(--theme);
+  color: var(--white);
 }
 .dashboard-main-area .payments-status-main-wrap .content {
   padding: 15px;

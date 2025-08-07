@@ -265,18 +265,28 @@
             .nav-item {
                 .nav-link {
                     display: inline-block;
-                    color: #FFF;
+                    color: #16B968;
                     font-size: 14px;
                     font-weight: 700;
                     text-transform: capitalize;
                     line-height: 1;
-                    background-color: #16B968;
+                    background-color: $white;
                     border-radius: 4px;
                     padding: 11px 14px;
+
+                    &.active {
+                        background-color: #16B968;
+                        color: $white;
+                    }
 
                     &.style-2 {
                         background-color: $white;
                         color: $theme-color;
+
+                        &.active {
+                            background-color: $theme-color;
+                            color: $white;
+                        }
                     }
                 }
             }
