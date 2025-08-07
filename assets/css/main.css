@@ -413,6 +413,7 @@ span {
 }
 .hero-1 .login-item .theme-btn {
   height: 55px;
+  line-height: 55px;
   background-color: var(--theme);
   width: 100%;
   display: inline-block;
