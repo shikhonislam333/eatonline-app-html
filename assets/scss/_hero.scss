@@ -158,6 +158,11 @@
 }
 
 .dashboard-main-area {
+
+    &.style-padding {
+        padding-bottom: 140px;
+    }
+
     .top-icon {
         margin-bottom: 30px;
 
@@ -598,7 +603,7 @@
         @include flex;
         justify-content: space-between;
         margin-bottom: 20px;
-        
+
         .arrow-icon {
             font-size: 20px;
 
@@ -628,4 +633,258 @@
             text-align: center;
         }
     }   
+
+    .order-numder-item {
+        padding: 13px 15px;
+        border-radius: 6px 6px 0 0;
+        background: #000;
+        margin-top: 20px;
+
+        h5 {
+            text-align: center;
+            color: #FFF;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: capitalize;
+
+            b{
+                 font-weight: 700;
+            }
+        }
+    }
+
+    .customer-details-info {
+        background: #FFF0ED;
+        padding: 15px 0;
+
+        .customer-details-wrap {
+            @include flex;
+            justify-content: space-between;
+
+            .details-left {
+                h6 {
+                    color: #686868;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    color: #686868;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+            }
+
+            .details-right {
+                h6 {
+                    color: #B61817;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .order-delevery-details-info {
+        @include flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.20);;
+
+        .left-item {
+            h6 {
+                color: #686868;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            span {
+                color: #686868;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+
+        .right-item {
+            h6 {
+                color: #686868;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            span {
+               color: #B61817;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .details-contact-info {
+        li {
+            @include flex;
+            gap: 10px;
+            padding: 15px 0;
+
+            &:not(:last-child){
+                border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            }
+
+            // &:last-child {
+            //      border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            // }
+
+            i {
+                color: $theme-color;
+            }
+
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+    }
+
+    .track-order-btn {
+        margin-top: 15px;
+
+        .theme-btn {
+            display: inline-block;
+            border-radius: 6px;
+            background: #B61817;
+            padding: 0 25px;
+            height: 55px;
+            line-height: 55px;
+            width: 100%;
+            text-align: center;
+            color: #FFF;
+            font-size: 16px;
+
+            svg {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .invoice {
+        background: #fff;
+        padding: 15px 0;
+        margin: auto;
+        border-radius: 5px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th,
+            td {
+                padding: 8px 0;
+                color: #000;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+
+            th {
+                color: #000;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            tr:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+            }
+
+            .right {
+            text-align: right;
+            }
+
+            td.quantity,
+            th.quantity {
+            text-align: center;
+            vertical-align: middle;
+            }
+
+            .total-section td {
+            font-weight: bold;
+            }
+
+            .discount {
+               td {
+                    color: #B61817;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+               }
+            }
+
+            .grand-total {
+                td {
+                    color: #000;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+   .decline-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff; /* চাইলে ব্যাকগ্রাউন্ড দাও */
+    padding: 15px 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 999; /* উপরে রাখার জন্য */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* উপরে হালকা শ্যাডো */
+}
+
+.decline-btn .theme-btn {
+    border-radius: 6px;
+    background: #B61817;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px;
+    flex: 1; /* বাটন দুইটা সমান আকারে হবে */
+}
+
+.decline-btn .theme-btn svg {
+    margin-right: 8px;
+}
+
+.decline-btn .theme-btn.style-2 {
+    background: #60AF18;
+}
+
+.decline-btn .theme-btn:hover {
+    background-color: #333; /* $header-color এর জায়গায় কালার দাও */
+}
+
 }
