@@ -948,9 +948,9 @@
                 -webkit-transition: all 500ms ease;
                 transition: all 500ms ease;
                  padding: 15px 16px;
-                 border-radius: 10px;
-                    background: #FFF;
-                    box-shadow: 0 4px 40px 0 rgba(192, 57, 43, 0.12);
+                //  border-radius: 10px;
+                //     background: #FFF;
+                //     box-shadow: 0 4px 40px 0 rgba(192, 57, 43, 0.12);
 
                 .acc-head-content {
                     h5 {
@@ -993,7 +993,7 @@
                             left: 0;
                             right: 0;
                             bottom: 0;
-                            background-color: #74B944;
+                            background-color: #ccc;
                             transition: 0.4s;
                             border-radius: 34px;
                 
@@ -1043,13 +1043,15 @@
                 position: relative;
                 display: none;
                 background-color: $white;
-                 padding: 15px 16px;
-                 padding-top: 0;
+                padding: 15px 16px;
+                padding-top: 0;
+                border-top: 1px solid rgba(0, 0, 0, 0.20);
 
                 .content {
                     position: relative;
                     @include flex;
                     justify-content: space-between;
+                    padding-top: 10px;
 
                     .text {
                         h6 {
