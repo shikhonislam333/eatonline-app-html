@@ -593,4 +593,39 @@
             }
         }
     }
+
+    .menu-top-list-header {
+        @include flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        
+        .arrow-icon {
+            font-size: 20px;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+
+        h6 {
+            color: #000;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .number {
+            display: inline-block;
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 50%;
+            background-color: #FFDA88;
+            text-align: center;
+        }
+    }   
 }

@@ -820,6 +820,37 @@ span {
 .dashboard-main-area .pre-order-list-area .pre-order-list-items ul li .right-text.style-2 b {
   color: #686868;
 }
+.dashboard-main-area .menu-top-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dashboard-main-area .menu-top-list-header .arrow-icon {
+  font-size: 20px;
+}
+.dashboard-main-area .menu-top-list-header .arrow-icon:hover {
+  color: var(--theme);
+}
+.dashboard-main-area .menu-top-list-header h6 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.dashboard-main-area .menu-top-list-header .number {
+  display: inline-block;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  background-color: #FFDA88;
+  text-align: center;
+}
 
 .mean-container a.meanmenu-reveal {
   display: none;
