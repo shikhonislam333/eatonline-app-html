@@ -375,6 +375,14 @@
             border-radius: 6px;
             background: #F2CA34;
 
+            @media screen and (max-width: 415px) {
+                padding: 10px;
+            }
+
+            @media screen and (max-width: 350px) {
+                padding: 9px;
+            }
+
             &.bg-2 {
                 background: #1E92D8;
             }
@@ -389,6 +397,14 @@
                 font-size: 14px;
                 text-transform: capitalize;
                 font-weight: 700;
+
+                 @media screen and (max-width: 415px) {
+                    font-size: 12px;
+                }
+
+                @media screen and (max-width: 350px) {
+                    font-size: 10px;
+                }
             }
 
             h6 {
@@ -396,6 +412,14 @@
                 font-size: 14px;
                 font-weight: 600;
                 text-transform: capitalize;
+
+                @media screen and (max-width: 415px) {
+                    font-size: 12px;
+                }
+
+                @media screen and (max-width: 350px) {
+                    font-size: 10px;
+                }
             }
         }
     }

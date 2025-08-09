@@ -622,6 +622,16 @@ span {
   border-radius: 6px;
   background: #F2CA34;
 }
+@media screen and (max-width: 415px) {
+  .dashboard-main-area .order-type-summery-items .content-box {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .dashboard-main-area .order-type-summery-items .content-box {
+    padding: 9px;
+  }
+}
 .dashboard-main-area .order-type-summery-items .content-box.bg-2 {
   background: #1E92D8;
 }
@@ -635,11 +645,31 @@ span {
   text-transform: capitalize;
   font-weight: 700;
 }
+@media screen and (max-width: 415px) {
+  .dashboard-main-area .order-type-summery-items .content-box span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .dashboard-main-area .order-type-summery-items .content-box span {
+    font-size: 10px;
+  }
+}
 .dashboard-main-area .order-type-summery-items .content-box h6 {
   color: #FFF;
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
+}
+@media screen and (max-width: 415px) {
+  .dashboard-main-area .order-type-summery-items .content-box h6 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .dashboard-main-area .order-type-summery-items .content-box h6 {
+    font-size: 10px;
+  }
 }
 .dashboard-main-area .table-reservations-items {
   border-radius: 6px;
