@@ -953,6 +953,11 @@ span {
 .dashboard-main-area .details-contact-info li i {
   color: var(--theme);
 }
+@media screen and (max-width: 400px) {
+  .dashboard-main-area .details-contact-info li {
+    font-size: 13px;
+  }
+}
 .dashboard-main-area .track-order-btn {
   margin-top: 15px;
 }
