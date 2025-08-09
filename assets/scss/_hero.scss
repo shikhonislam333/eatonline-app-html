@@ -632,6 +632,16 @@
             background-color: #FFDA88;
             text-align: center;
         }
+
+        .content {
+            p {
+                color: #686868;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+        }
     }   
 
     .order-numder-item {
@@ -783,6 +793,10 @@
             svg {
                 margin-right: 10px;
             }
+
+            &:hover {
+                background-color: $header-color;
+            }
         }
     }
 
@@ -850,45 +864,302 @@
         }
     }
 
-   .decline-btn {
+    .decline-btn {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #fff; /* চাইলে ব্যাকগ্রাউন্ড দাও */
+    background: #fff;
     padding: 15px 20px;
     display: flex;
     gap: 10px;
-    z-index: 999; /* উপরে রাখার জন্য */
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* উপরে হালকা শ্যাডো */
-}
+    z-index: 999; 
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 
-.decline-btn .theme-btn {
-    border-radius: 6px;
-    background: #B61817;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: capitalize;
-    height: 55px;
-    line-height: 55px;
-    padding: 0 10px;
-    flex: 1; /* বাটন দুইটা সমান আকারে হবে */
-}
+    .theme-btn {
+        border-radius: 6px;
+        background: #B61817;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: capitalize;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 10px;
+        flex: 1; 
 
-.decline-btn .theme-btn svg {
-    margin-right: 8px;
-}
+        svg {
+            margin-right: 8px;
+        }
 
-.decline-btn .theme-btn.style-2 {
-    background: #60AF18;
-}
+        &.style-2 {
+            background: #60AF18;
+        }
 
-.decline-btn .theme-btn:hover {
-    background-color: #333; /* $header-color এর জায়গায় কালার দাও */
-}
+        &:hover {
+            background-color: $header-color;
+        }
+    }
+    }
 
+    .breadcrumb-wrap {
+        position: relative;
+        z-index: 9;
+        border-radius: 10px;
+        padding: 25px 15px;
+
+        &::before {
+            @include before;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.40);
+            z-index: -1;
+        }
+
+        h4 {
+            text-align: center;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    }
+
+    .accordion-box {
+        position: relative;
+        margin-top: 40px;
+
+        .block {
+            position: relative;
+            background-color: transparent;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0 4px 40px 0 rgba(192, 57, 43, 0.12);
+           
+            line-height: 1;
+
+            .acc-btn {
+                position: relative;
+                text-transform: capitalize;
+                cursor: pointer;
+                -webkit-transition: all 500ms ease;
+                transition: all 500ms ease;
+                 padding: 15px 16px;
+                 border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 0 4px 40px 0 rgba(192, 57, 43, 0.12);
+
+                .acc-head-content {
+                    h5 {
+                        color: #000;
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        color: #686868;
+                        font-size: 12px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                }
+
+                .acc-right {
+                    @include flex;
+                    gap: 40px;
+                    position: absolute;
+                    top: 22px;
+                    right: 17px;
+                  .switch {
+                        position: relative;
+                        display: inline-block;
+                        width: 29px;
+                        height: 17px;
+                
+                        input {
+                            opacity: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                
+                        .slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: #74B944;
+                            transition: 0.4s;
+                            border-radius: 34px;
+                
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                height: 12px;
+                                width: 12px;
+                                left: 4px;
+                                bottom: 2.5px;
+                                background-color: white;
+                                transition: 0.4s;
+                                border-radius: 50%;
+                            }
+                        }
+                
+                        input:checked + .slider {
+                            background-color: #74B944;
+                        }
+                    
+                        input:checked + .slider:before {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+
+                @include breakpoint (max-xl){
+                    font-size: 17px;
+                    line-height: 1.5;
+                }
+
+                @include breakpoint (max-xxs){
+                    font-size: 15px;
+                }
+
+                .icon {
+                 
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: $header-color;
+                    -webkit-transition: all 500ms ease;
+                    transition: all 500ms ease;
+                }
+            }
+
+            .acc-content {
+                position: relative;
+                display: none;
+                background-color: $white;
+                 padding: 15px 16px;
+                 padding-top: 0;
+
+                .content {
+                    position: relative;
+                    @include flex;
+                    justify-content: space-between;
+
+                    .text {
+                        h6 {
+                            color: #000;
+                            font-size: 15px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                        }
+
+                        p {
+                            color: #686868;
+                            font-size: 12px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            margin-top: 9px;
+                        }
+                    }
+
+                    .cont-right {
+                        @include flex;
+                        gap: 17px;
+
+                        span {
+                            color: #000;
+                            font-size: 16px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+
+                .circle-checkbox {
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+                user-select: none;
+                font-size: 18px;
+                }
+
+                .circle-checkbox input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                }
+
+                .circle-checkbox .checkmark {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 20px;
+                    width: 20px;
+                    background-color: $theme-color;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                }
+
+                /* Check icon */
+                .circle-checkbox input:checked + .checkmark {
+                    background-color: $theme-color;;
+                    border-color: $theme-color;;
+                }
+
+                .circle-checkbox .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                     display: block;
+                    left: 7px;
+                    top: 2px;
+                    width: 6px;
+                    height: 12px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+
+                /* Show check icon when checked */
+                .circle-checkbox input:checked + .checkmark:after {
+                    display: block;
+                    left: 7px;
+                    top: 2px;
+                    width: 6px;
+                    height: 12px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+
+            }
+        }
+    }
+
+    .accordion-box .block .acc-content.current {
+        display: block;
+    }
+
+    .accordion-box .block .acc-btn.active .icon:before {
+        content: "\f077";
+        color: $theme-color;
+    }
+
+    .accordion-box .block .acc-btn.active {
+        color: $theme-color;
+    }
+
+    .accordion-box .block:last-child {
+        margin-bottom: 0;
+    }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*CSS Table Of Content Ends Here*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
@@ -294,6 +293,13 @@ span {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+
 .hero-1 {
   position: relative;
   padding: 142px 0 0;
@@ -855,6 +861,13 @@ span {
   background-color: #FFDA88;
   text-align: center;
 }
+.dashboard-main-area .menu-top-list-header .content p {
+  color: #686868;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
 .dashboard-main-area .order-numder-item {
   padding: 13px 15px;
   border-radius: 6px 6px 0 0;
@@ -976,6 +989,9 @@ span {
 .dashboard-main-area .track-order-btn .theme-btn svg {
   margin-right: 10px;
 }
+.dashboard-main-area .track-order-btn .theme-btn:hover {
+  background-color: var(--header);
+}
 .dashboard-main-area .invoice {
   background: #fff;
   padding: 15px 0;
@@ -1031,12 +1047,12 @@ span {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #fff; /* চাইলে ব্যাকগ্রাউন্ড দাও */
+  background: #fff;
   padding: 15px 20px;
   display: flex;
   gap: 10px;
-  z-index: 999; /* উপরে রাখার জন্য */
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* উপরে হালকা শ্যাডো */
+  z-index: 999;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 .dashboard-main-area .decline-btn .theme-btn {
   border-radius: 6px;
@@ -1051,7 +1067,7 @@ span {
   height: 55px;
   line-height: 55px;
   padding: 0 10px;
-  flex: 1; /* বাটন দুইটা সমান আকারে হবে */
+  flex: 1;
 }
 .dashboard-main-area .decline-btn .theme-btn svg {
   margin-right: 8px;
@@ -1060,7 +1076,239 @@ span {
   background: #60AF18;
 }
 .dashboard-main-area .decline-btn .theme-btn:hover {
-  background-color: #333; /* $header-color এর জায়গায় কালার দাও */
+  background-color: var(--header);
+}
+.dashboard-main-area .breadcrumb-wrap {
+  position: relative;
+  z-index: 9;
+  border-radius: 10px;
+  padding: 25px 15px;
+}
+.dashboard-main-area .breadcrumb-wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+.dashboard-main-area .breadcrumb-wrap h4 {
+  text-align: center;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.dashboard-main-area .accordion-box {
+  position: relative;
+  margin-top: 40px;
+}
+.dashboard-main-area .accordion-box .block {
+  position: relative;
+  background-color: transparent;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 4px 40px 0 rgba(192, 57, 43, 0.12);
+  line-height: 1;
+}
+.dashboard-main-area .accordion-box .block .acc-btn {
+  position: relative;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  padding: 15px 16px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 4px 40px 0 rgba(192, 57, 43, 0.12);
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-head-content h5 {
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-head-content p {
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  top: 22px;
+  right: 17px;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right .switch {
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 17px;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #74B944;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 2.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right .switch input:checked + .slider {
+  background-color: #74B944;
+}
+.dashboard-main-area .accordion-box .block .acc-btn .acc-right .switch input:checked + .slider:before {
+  transform: translateX(10px);
+}
+@media (max-width: 1199px) {
+  .dashboard-main-area .accordion-box .block .acc-btn {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 470px) {
+  .dashboard-main-area .accordion-box .block .acc-btn {
+    font-size: 15px;
+  }
+}
+.dashboard-main-area .accordion-box .block .acc-btn .icon {
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--header);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.dashboard-main-area .accordion-box .block .acc-content {
+  position: relative;
+  display: none;
+  background-color: var(--white);
+  padding: 15px 16px;
+  padding-top: 0;
+  /* Check icon */
+  /* Show check icon when checked */
+}
+.dashboard-main-area .accordion-box .block .acc-content .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard-main-area .accordion-box .block .acc-content .content .text h6 {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.dashboard-main-area .accordion-box .block .acc-content .content .text p {
+  color: #686868;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-top: 9px;
+}
+.dashboard-main-area .accordion-box .block .acc-content .content .cont-right {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.dashboard-main-area .accordion-box .block .acc-content .content .cont-right span {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.dashboard-main-area .accordion-box .block .acc-content .circle-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+}
+.dashboard-main-area .accordion-box .block .acc-content .circle-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.dashboard-main-area .accordion-box .block .acc-content .circle-checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: var(--theme);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.dashboard-main-area .accordion-box .block .acc-content .circle-checkbox input:checked + .checkmark {
+  background-color: var(--theme);
+  border-color: var(--theme);
+}
+.dashboard-main-area .accordion-box .block .acc-content .circle-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  display: block;
+  left: 7px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.dashboard-main-area .accordion-box .block .acc-content .circle-checkbox input:checked + .checkmark:after {
+  display: block;
+  left: 7px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.dashboard-main-area .accordion-box .block .acc-content.current {
+  display: block;
+}
+.dashboard-main-area .accordion-box .block .acc-btn.active .icon:before {
+  content: "\f077";
+  color: var(--theme);
+}
+.dashboard-main-area .accordion-box .block .acc-btn.active {
+  color: var(--theme);
+}
+.dashboard-main-area .accordion-box .block:last-child {
+  margin-bottom: 0;
 }
 
 .mean-container a.meanmenu-reveal {
